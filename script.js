@@ -152,8 +152,8 @@ $(document).ready(function () {
             const activity = data.data.activities.find(act => 
                 (act.type === 0 || act.type === 2) &&
                 act.name !== "Nintendo Switch 2" &&
-                (!act.state || !act.state.includes("Played for")) &&
-                (!act.assets || !act.assets.large_text || !act.assets.large_text.includes("Playing on Nintendo Switch 2"))
+                (!act.assets || !act.assets.large_text || !act.assets.large_text.includes("Playing on Nintendo Switch 2")) &&
+                act.name !== "Spotify"
             );
             if (activity) {
                 let statusText = "";
