@@ -1038,4 +1038,81 @@ button{
     .miiIdle{
         margin-left: -10pt;
     }
+    
+    .miiIdle:hover .back{
+        bottom: 20pt;
+        opacity: 1;
+    }
+
+    
+
+}
+
+@media (max-width: 390px){
+
+    .mIdleVid{
+        width: 90pt;
+    }
+
+    .miiIdle{
+        z-index: 10000;
+    }
+
+    .subtitle{
+        font-size: smaller;
+    }
+
+    .about-carousel-content{
+        font-size: small;
+    }
+
+    .about-section-title{
+        font-size: medium;
+        margin-top: 5pt;
+    }
+
+    .back{
+        opacity: 100%;
+        bottom: 20pt;
+        left: 75%;
+        transform: translateX(-50%);
+        font-size: 13pt;
+        padding: 3pt;
+        width: 60%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .linkBox{
+        width: fit-content;
+        min-width: auto;
+        max-width: auto;
+        max-height: 50pt;
+        border-radius: 20pt;
+    }
+
+    .linkIcon{
+        width: 50pt;
+    }
+
+    .statusContainer{
+        min-width: 120pt;
+        max-width: 120pt;
+    }
+
+    .statusText{
+        font-size: small;
+    }
+
+    #speechBubble{
+        max-width: 150pt;
+        min-width: auto;
+        width: fit-content;
+    }
+
+    #speechText{
+        font-size: small;
+    }
+
+
 }
