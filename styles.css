@@ -20,6 +20,12 @@ body,html{
     /* overflow: hidden; */
 }
 
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
 img{
     -webkit-user-drag: none;
     user-select: none;
@@ -82,7 +88,7 @@ img{
 }
 
 .logo{
-    max-width: 450pt;
+    max-width: 350pt;
     width: 50vw;
     margin: auto;
     padding: 5pt;
@@ -811,7 +817,7 @@ svg#bubble:active .BubbleShadow{
 .about-carousel-content {
     min-height: 180pt;
     max-height: 180pt;
-    overflow: scroll;
+    overflow:auto;
     border-radius: 20pt;
     display: flex;
     flex-direction: column;
