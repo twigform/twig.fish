@@ -257,7 +257,7 @@ img{
 .statusContainer::after {
   content: "↑";
   position: absolute;
-  top: -18pt;
+  top: -16pt;
   left: 50%;
   transform: translateX(-50%) rotate(0deg);
   width: 60pt;
@@ -1095,9 +1095,9 @@ button{
     }
 
     .linkBox{
-        width: fit-content;
+        width: 180pt;
         min-width: auto;
-        max-width: auto;
+        max-width: 100%;
         max-height: 50pt;
         border-radius: 20pt;
     }
