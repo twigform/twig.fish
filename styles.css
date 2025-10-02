@@ -495,9 +495,15 @@ img{
 .miiIdle{
     position: fixed;
     bottom: -10pt;
-    z-index: 2;
+    z-index: 200;
     width: 200pt;
     height: auto;
+}
+
+@supports (-webkit-touch-callout: none){
+    .mIdleVid{
+        visibility: hidden;
+    }
 }
 
 .mIdleVid{
@@ -1044,11 +1050,16 @@ button{
         opacity: 1;
     }
 
+    #miiCnr{
+        width: 15vh;
+        height: auto;
+    }
+
     
 
 }
 
-@media (max-width: 390px){
+@media (max-width: 415px){
 
     .mIdleVid{
         width: 90pt;
@@ -1089,6 +1100,10 @@ button{
         max-width: auto;
         max-height: 50pt;
         border-radius: 20pt;
+    }
+
+    .linksContainer{
+        padding: 10pt;
     }
 
     .linkIcon{
