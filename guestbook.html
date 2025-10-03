@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook!</title>
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets\img\faviconcept.svg">
+    <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.0.0/css/all.css"/> -->
+</head>
+<body>
+    <div class="header">
+        <h1 class="title"><p class='icon'>( &nbsp;</p>Guestbook!<p class='icon'>&nbsp; )</p></h1>
+        <div class="separator"></div>
+        <p class="subtitle">My guestbook! You can type things! Those things you type can show up, also! Feel free to say whatever as long as it's not mean or hateful... You wouldn't be mean or hateful on the internet... right?</p>
+    </div> 
+
+    <div class="guestbook">
+        <form id="guestbookform">
+            <input type="text" id="author" placeholder="Your name" required />
+            <input type="text" id="message" placeholder="Your message" required />
+            <button type="submit" id="postbutton">Post</button>
+        </form>
+
+
+
+        <div id="posts"></div>
+    </div>
+
+    <div class="miiIdle">
+        <a class="back" href="index">← Back Home?</a>
+        <video autoplay muted loop playsinline class="mIdleVid">
+            <source src="assets\img\idle.webm" type="video/webm">
+        </video>
+    </div>
+
+    <div class="backgroundContainer">
+        <div class="scroller"></div>
+    </div>
+</body>
+<footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="guestbook.js"></script>
+</footer>
+</html>
