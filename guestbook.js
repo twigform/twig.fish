@@ -22,16 +22,6 @@ async function fetchPosts() {
 
         return `rgb(${r}, ${g}, ${b})`;
     }
-
-    function processMessageImages(message) {
-        return message.replace(/<img([^>]*?)>/gi, (match, attributes) => {
-            if (attributes.includes('class=')) {
-                return match.replace(/class=["']([^"']*?)["']/i, 'class="$1 guestbookImg"');
-            } else {
-                return `<img${attributes} class="guestbookImg">`;
-            }
-        });
-    }
     
     postsList.innerHTML = posts
       .map((post, index) => {
@@ -45,12 +35,11 @@ async function fetchPosts() {
         });
         const color = colors[index % colors.length];
         const shadowColor = darkenHexColor(color, 0.3);
-        const processedMessage = processMessageImages(post.message);
         return `
           <div class="guestbook-post" style="border: 3px solid ${color}; --shadow-color: ${shadowColor};">
             <strong style="color: ${color};">${post.author}</strong> 
             <span class="dnt" style="color: #666; font-size: 0.9em;"> - ${formatted}:</span>
-            <div style="margin-top: 5px;">${processedMessage}</div>
+            <div style="margin-top: 5px;">${post.message}</div>
           </div>
         `;
       })
