@@ -986,6 +986,12 @@ button{
     transform: translateY(-4px);
 }
 
+.guestbook-post img{
+    max-width: 150pt;
+    height: auto;
+    border-radius: 10pt;
+}
+
 @media (max-width: 768px) {
 
     .guestbook{
