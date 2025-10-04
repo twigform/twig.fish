@@ -885,7 +885,7 @@ button{
 }
 
 .guestbook{
-    z-index: 300000000;
+    z-index: 2;
     box-sizing: border-box;
     position: relative;
     align-items: center;
