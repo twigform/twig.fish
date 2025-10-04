@@ -25,7 +25,8 @@ async function fetchPosts() {
     
     postsList.innerHTML = posts
       .map((post, index) => {
-        const date = new Date(post.created_at);
+        // Ensure the date is properly parsed as UTC and then converted to local time
+        const date = new Date(post.created_at + (post.created_at.includes('Z') ? '' : 'Z'));
         const formatted = date.toLocaleString(undefined, {
           year: 'numeric',
           month: 'short',
