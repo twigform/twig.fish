@@ -338,7 +338,7 @@ const aboutSections = [
         id: 'btn-links',
         title: 'Links',
         content: `<h2 class="about-section-title">Links</h2>
-        <a href="https://github.com/twiiig" target="_blank">• GitHub <img src="assets/img/github.svg" alt="GitHub" style="width: 16px; height: 16px; vertical-align: middle;"></a><br>
+        <a href="https://github.com/twigform" target="_blank">• GitHub <img src="assets/img/github.svg" alt="GitHub" style="width: 16px; height: 16px; vertical-align: middle;"></a><br>
         <a href="https://bsky.app/profile/twigform.bsky.social" target="_blank">• Bluesky <img src="assets/img/bsky.svg" alt="Bluesky" style="width: 16px; height: 16px; vertical-align: middle;"></a><br>
         <a href="#" id="discord-link">• Discord <img src="assets/img/discord.svg" alt="Discord" style="width: 16px; height: 16px; vertical-align: middle;"></a><br>
         <a href="https://nxapi-auth.fancy.org.uk/@twigform" target="_blank">• Nintendo <img src="assets/img/nintendo.svg" alt="Nintendo" style="width: 16px; height: 16px; vertical-align: middle;"></a><br>`
