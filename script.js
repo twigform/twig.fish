@@ -458,3 +458,5 @@ function scheduleTwig() {
         scheduleTwig();
     }, nextTime);
 }
+
+scheduleTwig();
