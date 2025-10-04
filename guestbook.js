@@ -25,7 +25,6 @@ async function fetchPosts() {
     
     postsList.innerHTML = posts
       .map((post, index) => {
-        // Ensure the date is properly parsed as UTC and then converted to local time
         const date = new Date(post.created_at + (post.created_at.includes('Z') ? '' : 'Z'));
         const formatted = date.toLocaleString(undefined, {
           year: 'numeric',
@@ -33,7 +32,6 @@ async function fetchPosts() {
           day: 'numeric',
           hour: '2-digit',
           minute: '2-digit',
-          timeZoneName: 'short'
         });
         const color = colors[index % colors.length];
         const shadowColor = darkenHexColor(color, 0.3);
