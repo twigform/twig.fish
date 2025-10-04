@@ -5,7 +5,7 @@ const postsList = document.getElementById("posts");
 
 let currentPage = 0;
 const postsPerPage = 15;
-let allPosts = []; // Store all posts
+let allPosts = []; 
 let isLoading = false;
 let hasMorePosts = true;
 
@@ -29,12 +29,12 @@ async function fetchPosts() {
     const res = await fetch(API_URL);
     const posts = await res.json();
     
-    allPosts = posts; // Store all posts
-    currentPage = 0; // Reset pagination
+    allPosts = posts; 
+    currentPage = 0; 
     hasMorePosts = true;
-    postsList.innerHTML = ""; // Clear existing posts
+    postsList.innerHTML = ""; 
     
-    // Load first chunk
+    
     loadPostsChunk();
   } catch (error) {
     console.error("Error fetching posts:", error);
@@ -45,7 +45,7 @@ async function fetchPosts() {
 function setupInfiniteScroll() {
     let throttled = false;
     
-    // The guestbook container has overflow: auto, so we need to listen to its scroll
+    
     const guestbookContainer = document.querySelector('.guestbook');
     
     if (guestbookContainer) {
@@ -61,7 +61,7 @@ function setupInfiniteScroll() {
             
             const scrollPercentage = (scrollTop + clientHeight) / scrollHeight;
             
-            // Trigger when 80% scrolled within the guestbook container
+            
             if (scrollPercentage > 0.8) {
                 loadPostsChunk();
             }
@@ -110,10 +110,10 @@ function updateLoadMoreButton() {
     const endEl = document.getElementById('end-message');
     
     if (!hasMorePosts) {
-        // Hide the button when no more posts
+        
         if (existingBtn) existingBtn.style.display = 'none';
     } else if (!existingBtn && loadingEl) {
-        // Create and insert the button before the loading indicator
+        
         const loadMoreBtn = createLoadMoreButton();
         loadingEl.parentNode.insertBefore(loadMoreBtn, loadingEl);
     }
@@ -130,7 +130,7 @@ function loadPostsChunk() {
         loadingEl.style.display = 'block';
     }
     
-    // Hide load more button while loading
+    
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     if (loadMoreBtn) loadMoreBtn.style.display = 'none';
     
@@ -199,7 +199,7 @@ async function submitPost(author, message) {
     });
     
     form.reset();
-    fetchPosts(); // This will reload all posts and reset pagination
+    fetchPosts(); 
   } catch (error) {
     console.error("Error submitting post:", error);
     alert("Error submitting post. Please try again. Or don't, it's probably an issue on my end, to be honest...");
