@@ -974,6 +974,7 @@ button{
     padding: 10px; 
     margin: 15px 0; 
     max-width: 500pt;
+    min-width: 500pt;
     text-wrap: wrap;
     overflow-wrap: break-word;
     border-radius: 10px;
@@ -1003,6 +1004,8 @@ button{
 
     .guestbook-post{
         font-size: 10pt;
+        max-width: 200pt;
+        min-width: 200pt;
     }
 
     #author, #message{
