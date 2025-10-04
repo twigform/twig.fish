@@ -168,9 +168,9 @@ function loadPostsChunk() {
                 return `
                     <div class="guestbook-post" style="border: 3px solid ${color}; --shadow-color: ${shadowColor}; position: relative;">
                         ${svgIcon}
-                        <strong style="color: ${color};">${post.author}</strong> 
+                        <strong style="color: ${color};" class="author">${post.author}</strong> 
                         <span class="dnt" style="color: #666; font-size: 0.9em;"> - ${formatted}:</span>
-                        <div style="margin-top: 5px;">${post.message}</div>
+                        <div style="margin-top: 5px;" class='message'>${post.message}</div>
                     </div>
                 `;
             })

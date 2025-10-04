@@ -902,7 +902,6 @@ button{
     border: 3pt solid lightgray;
     width: 60vw;
     align-content: center;
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
@@ -980,6 +979,15 @@ button{
     border-radius: 10px;
 }
 
+.author{
+    margin-left: 35pt;
+}
+
+.message{
+    margin-top: 2pt !important;
+    margin-left: 35pt;
+}
+
 .guestbook-post:hover{
     scale: 1.05;
     cursor: pointer;
@@ -1010,12 +1018,21 @@ button{
     .profile-icon{
         display: none;
     }
+    .author{
+    margin-left: 0pt;
+    }
+
+    .message{
+        margin-top: 5pt;
+        margin-left: 0pt;
+    }
 
     .guestbook{
         margin-left: 10pt;
         margin-right: 10pt;
         width: calc(100vw - 20pt);
         max-height: 45vh;
+        text-align: center !important;
     }
 
     .guestbook-post{
