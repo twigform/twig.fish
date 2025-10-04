@@ -26,7 +26,14 @@ async function fetchPosts() {
     postsList.innerHTML = posts
       .map((post, index) => {
         const date = new Date(post.created_at);
-        const formatted = date.toLocaleString();
+        const formatted = date.toLocaleString(undefined, {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          timeZoneName: 'short'
+        });
         const color = colors[index % colors.length];
         const shadowColor = darkenHexColor(color, 0.3);
         return `
