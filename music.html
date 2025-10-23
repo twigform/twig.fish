@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music!</title>
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets\img\faviconcept.svg">
+    <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.0.0/css/all.css"/> -->
+</head>
+<body>
+    <div class="header">
+        <h1 class="title"><p class='icon'>( &nbsp;</p>Music!<p class='icon'>&nbsp; )</p></h1>
+        <div class="separator"></div>
+        <p class="subtitle">I make music! You can listen to it! You can also not listen to it! A truly versatile medium... ♪</p>
+    </div> 
+    <div class="miiIdle">
+        <a class="back" href="index">← Back Home?</a>
+        <video autoplay muted loop playsinline class="mIdleVid">
+            <source src="assets\img\idle.webm" type="video/webm">
+        </video>
+    </div>
+
+    <div class="audio-player">
+        <div class="track-info" style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+            <a href="https://soundcloud.com/patchform" target="_blank" rel="noopener noreferrer">
+                <img src="https://i1.sndcdn.com/artworks-Tvrn79o5ZOizPoUi-qwQ8CQ-t1080x1080.png" alt="Track artwork" style="width: 100px; height: 100px; object-fit: cover; border-radius: 10px;">
+            </a>
+            <div>
+                <a href="https://soundcloud.com/patchform" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 1.2em; font-weight: bold;">Mashing Reminds Me Of You</div>
+                    <div style="font-size: 1em; color: #666;">Patchform</div>
+                </a>
+            </div>
+        </div>
+        <audio id="audioElement">
+            <source src="assets\snd\Patchform - Mashing Reminds Me Of You.mp3" type="audio/mpeg">
+        </audio>
+        
+        <div class="player-controls">
+            <button id="playPauseBtn" class="play-pause-btn">
+                <svg id="playIcon" width="20" height="20" viewBox="0 0 24 24" fill="black">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                <svg id="pauseIcon" width="20" height="20" viewBox="0 0 24 24" fill="black" style="display: none;">
+                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                </svg>
+            </button>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-handle" id="progressHandle"></div>
+                    <div class="progress-tooltip" id="progressTooltip">0:00</div>
+                </div>
+            </div>
+            <div class="time-display">
+                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="floater">
+        <div class="words">My music is mostly centered around the subgenre "Mashcore", but I definitely experiment and make some other genres as well. <br><br>My main influences for my music are: Shoebill, Reizoko CJ, Venetian Snares, Renard, and a multitude of others. <br><br> If you wanna check my stuff out, you can find me as "Patchform" on Soundcloud, or you can just click the album cover above this!</div>
+    </div>
+
+
+    <div class="backgroundContainer">
+        <div class="scroller"></div>
+    </div>
+</body>
+<footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+</footer>
+
+</html>
+
