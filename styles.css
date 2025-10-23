@@ -1324,13 +1324,13 @@ button{
 
 
     .back{
+        position: fixed;
         opacity: 100%;
         bottom: 20pt;
-        left: 90%;
+        left: 50%;
         transform: translateX(-50%);
         font-size: 13pt;
         padding: 3pt;
-        width: 60%;
         text-align: center;
         box-sizing: border-box;
     }
@@ -1420,13 +1420,13 @@ button{
     }
 
     .back{
+        position: fixed;
         opacity: 100%;
         bottom: 20pt;
-        left: 75%;
+        left: 50%;
         transform: translateX(-50%);
         font-size: 13pt;
         padding: 3pt;
-        width: 60%;
         text-align: center;
         box-sizing: border-box;
     }
