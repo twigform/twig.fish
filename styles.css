@@ -85,7 +85,13 @@ img{
     justify-content: center;
     width: 100%;
     text-align: center;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
+.title:hover{
+    scale: 1.1;
+}
+
 
 .logo{
     max-width: 350pt;
@@ -909,38 +915,47 @@ button{
 #author{
     font-family: 'Nintendo', sans-serif;
     font-size: 11pt;
-    margin: 0pt;
+    margin: 2pt;
     border-radius: 5pt;
     border: 2pt solid lightgray;
     width: auto;
     padding-left: 20pt;
     padding-right: 20pt;
+    background-color: whitesmoke;
     padding-top: 5pt;
     padding-bottom: 5pt;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease, scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
 #message{
     font-family: 'Nintendo', sans-serif;
     font-size: 11pt;
-    margin: 0pt;
+    margin: 2pt;
     border-radius: 5pt;
     border: 2pt solid lightgray;
+    background-color: whitesmoke;
     width: auto;
     padding-left: 20pt;
     padding-right: 20pt;
     padding-top: 5pt;
     padding-bottom: 5pt;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease, scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+#author:hover, #message:hover{
+    cursor: pointer;
+    scale: 0.97;
 }
 
 #author:focus, #message:focus{
     outline: none;
     border: 2pt solid #7446de;
     box-shadow: 0 0 0 4px rgba(116,70,222,0.12), 0 6px 12px rgba(0,0,0,0.06);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    background-color: white;
+    transition: box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2), border 0.4s ease-out, background 0.4s ease-out, scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    cursor: text;
+    scale: 1;
 }
-
 #postbutton{
     box-sizing: border-box;
     z-index: 2;
@@ -953,7 +968,7 @@ button{
     border: 2.5pt solid transparent;
     background-color: #f5f5f5;
     border: 2pt solid lightgray;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    transition: box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2), border 0.4s ease, transform 0.4s ease;
     margin-top: 10pt;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -962,9 +977,19 @@ button{
 
 #postbutton:hover{
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-    border: 2.5pt solid #7446de;
+    border: 2pt solid #7446de;
     box-shadow: 0px 3px 0px #3a236f;
+    background-color: white;
     cursor: pointer;
+    transform: translateY(-3px);
+}
+
+#postbutton:active{
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2), transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    border: 2pt solid #7446de;
+    box-shadow: 0px 0px 0px #3a236f;
+    cursor: pointer;
+    transform: translateY(3px);
 }
 
 .guestbook-post{
@@ -990,7 +1015,7 @@ button{
 }
 
 .guestbook-post:hover{
-    scale: 1.05;
+    scale: 1.02;
     cursor: pointer;
     box-shadow: 0px 4px 0px var(--shadow-color);
     transform: translateY(-4px);

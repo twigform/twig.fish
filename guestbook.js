@@ -1,3 +1,5 @@
+// todo: likes system, maybe post color customization?
+
 const API_URL = "https://guestbook-worker.twigscoolemail.workers.dev/";
 
 const form = document.getElementById("guestbookform");
@@ -38,7 +40,7 @@ async function fetchPosts() {
     loadPostsChunk();
   } catch (error) {
     console.error("Error fetching posts:", error);
-    postsList.innerHTML = "<div>Error loading posts. Please try again later.</div>";
+    postsList.innerHTML = "<div>Error loading posts. You're either on a slow/buggy network or I messed something up badly...</div>";
   }
 }
 
