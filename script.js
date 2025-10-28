@@ -32,63 +32,42 @@ $(document).ready(function () {
         return idx;
     }
 
-    function waitForButt(selector){
-        return new Promise((resolve => {
-            $(selector).on('click', function() {
+    function waitForButt(selector) {
+        return new Promise((resolve) => {
+            $(selector).one('click', function () {
                 resolve();
             });
-        }));
+        });
     }
 
-
-    $(miiCnr).on('click', function() {
-        if (animating == 1) {
+    $(miiCnr).on('click', function () {
+        if (animating === 1) {
             console.log("already animating");
             return;
-        } 
-        else {
-            $("#speechText").text("" + messages[getRandomMessageIndex()] + " ");
-            animating = 1;
-            $(miiCnr).attr('src', 'assets/img/mii_talk.png');
-            if (windowWidth < 600) {
-                setLinksFadeOut(true);
-                $("#speechBubble").show();
-                $("#speechBubble").animate({
-                    'opacity': 1,
-                    'bottom': '100pt',
-                }, 500, 'easeOutCirc', function() {
-                    setTimeout(async function() {
-                        $("#speechBubble").animate({
-                            'opacity': 0,
-                            'bottom': '80pt',
-                        }, await waitForButt("#nextButton"), 'easeOutCirc', function() {
-                            $(this).hide();
-                            setLinksFadeOut(false);
-                        });
-                        animating = 0;
-                        $(miiCnr).attr('src', 'assets/img/mii_wave.png');
-                    }, 500);            
-                });
-            }else{
-                $("#speechBubble").show();
-                $("#speechBubble").animate({
-                    'opacity': 1,
-                    'bottom': '180pt',
-                }, 500, 'easeOutCirc', function() {
-                    setTimeout(async function() {
-                        $("#speechBubble").animate({
-                            'opacity': 0,
-                            'bottom': '150pt',
-                            'display': 'none'
-                        }, await waitForButt("#nextButton"), 'easeOutCirc', function() {
-                            $(this).hide();
-                        });
-                        animating = 0;
-                        $(miiCnr).attr('src', 'assets/img/mii_wave.png');
-                    }, 500);            
-                });
-            }
         }
+
+        $("#speechText").text("" + messages[getRandomMessageIndex()] + " ");
+        animating = 1;
+        $(miiCnr).attr('src', 'assets/img/mii_talk.png');
+
+        const bubbleAnimation = windowWidth < 600
+            ? { opacity: 1, bottom: '100pt' }
+            : { opacity: 1, bottom: '180pt' };
+
+        const bubbleHideAnimation = windowWidth < 600
+            ? { opacity: 0, bottom: '80pt' }
+            : { opacity: 0, bottom: '150pt' };
+
+        setLinksFadeOut(true);
+        $("#speechBubble").show().animate(bubbleAnimation, 500, 'easeOutCirc', async function () {
+            await waitForButt("#nextButton");
+            $("#speechBubble").animate(bubbleHideAnimation, 500, 'easeOutCirc', function () {
+                $(this).hide();
+                setLinksFadeOut(false);
+                animating = 0;
+                $(miiCnr).attr('src', 'assets/img/mii_wave.png');
+            });
+        });
     });
 
     let carouselItems = [];
