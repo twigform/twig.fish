@@ -1,3 +1,10 @@
+:root {
+    --bg: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
+    --shdw: 0 4px 16px 0 rgba(0,0,0,0.10);
+    /* , 0 0 5px 4px rgba(180,180,180,0.11) inset (add for bubbley look, gonna rework styles later)*/
+    --bdr: 3pt solid lightgray;
+}
+
 @font-face {
     font-family: 'Nintendo';
     src: url('assets/fonts/Nintendo Wii U (NintendoU).ttf') format('truetype');
@@ -117,14 +124,14 @@ img{
     text-align: center;
     margin: auto;
     margin-top: 5vh;
-    background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: var(--bg);
+    box-shadow: var(--shdw);
     align-items: center;
     width: 90vw;
     height: fit-content;
     padding: 15pt;
     border-radius: 25pt;
-    border: 3pt solid lightgray;
+    border: var(--bdr);
     max-width: 895px;
 }
 
@@ -163,7 +170,7 @@ img{
     bottom: 180pt;
     right: 180pt;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
+    background: var(--bg);
     padding: 15pt;
     border-radius: 25pt 25pt 2pt 25pt;
     border: 2.5pt solid lightgray;
@@ -223,16 +230,16 @@ img{
     bottom: -1000pt;
     left: 2.5vw;
     z-index: 2;
-    background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: var(--bg);
+    box-shadow: var(--shdw);
     align-items: center;
     width: fit-content;
     height: fit-content;
     padding: 15pt;
     border-radius: 25pt 25pt 0pt 0pt;
-    border-top: 3pt solid lightgray;
-    border-left: 3pt solid lightgray;
-    border-right: 3pt solid lightgray;
+    border-top: var(--bdr);
+    border-left: var(--bdr);
+    border-right: var(--bdr);
     font-family: 'Nintendo', sans-serif;
     display: flex;
     flex-direction: column;
@@ -243,21 +250,21 @@ img{
 }
 
 .statusContainer::before {
-  content: "";
-  position: absolute;
-  top: -18pt;
-  cursor: pointer;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60pt;
-  height: 15pt;
-  background: rgba(247, 247, 247, 1);
-  box-shadow: 0px 10px 0px rgba(247, 247, 247, 1);
-  border-top: 3pt solid lightgray;
-  border-left: 3pt solid lightgray;
-  border-right: 3pt solid lightgray;
-  border-radius: 15pt 15pt 0 0;
-  z-index: 1;
+    content: "";
+    position: absolute;
+    top: -18pt;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60pt;
+    height: 15pt;
+    background: rgba(247, 247, 247, 1);
+    box-shadow: 0px 10px 0px rgba(247, 247, 247, 1);
+    border-top: var(--bdr);
+    border-left: var(--bdr);
+    border-right: var(--bdr);
+    border-radius: 15pt 15pt 0 0;
+    z-index: 1;
 }
 
 .statusContainer::after {
@@ -303,7 +310,7 @@ img{
 }
 
 .carouselPrev{
-    border: 3pt solid lightgray;
+    border: var(--bdr);
     border-radius: 10pt;
     position: absolute;
     left: -15pt;
@@ -317,7 +324,7 @@ img{
 }
 
 .carouselNext{
-    border: 3pt solid lightgray;
+    border: var(--bdr);
     border-radius: 10pt;
     position: absolute;
     right: -15pt;
@@ -397,9 +404,9 @@ img{
     z-index: 2;          
     margin: auto;
     margin-top: 50px;
-    background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
+    background: var(--bg);
     border-radius: 25pt;
-    border: 3pt solid lightgray;
+    border: var(--bdr);
     width: fit-content;
     padding: 20pt;
     display: grid;
@@ -410,7 +417,7 @@ img{
     justify-items: center;
     box-sizing: border-box;
     transition: opacity 0.3s ease, filter 0.3s ease, transform 0.4s cubic-bezier(0.4,0,0.2,1);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shdw);
 }
 
 .linkBox{
@@ -529,7 +536,7 @@ img{
     transition: bottom 200ms cubic-bezier(0.68, -0.6, 0.32, 1.6), box-shadow 200ms cubic-bezier(0.65, 0, 0.35, 1), transform 200ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms cubic-bezier(0.65, 0, 0.35, 1);
     font-size: 20;
     padding: 5pt;
-    background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
+    background: var(--bg);
     border: lightgray 2pt solid;
     box-sizing: border-box;
 }
@@ -620,16 +627,16 @@ svg.smiley:active .SmileShadow {
     margin-top: 40px;
     position: relative;
     z-index: 10;
-    background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
+    background: var(--bg);
     width: fit-content;
     padding: 20pt;
     margin: auto;
     margin-top: 25pt;
     border-radius: 50pt;
-    border: 3pt solid lightgray;
+    border: var(--bdr);
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     opacity: 100%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shdw);
 }
 
 
@@ -811,10 +818,10 @@ svg#bubble:active .BubbleShadow{
 #aboutMeCarousel {
     position: relative;
     z-index: 2;
-    background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
-    box-shadow: 0px 8px 32px rgba(0,0,0,0.18);
+    background: var(--bg);
+    box-shadow: var(--shdw);
     border-radius: 30pt;
-    border: 3pt solid lightgray;
+    border: var(--bdr);
     padding: 15pt;
     min-width: 320px;
     font-family: Nintendo;
@@ -860,7 +867,6 @@ svg#bubble:active .BubbleShadow{
         background 0.3s cubic-bezier(0.4,0,0.2,1),
         border-radius 0.3s cubic-bezier(0.4,0,0.2,1);
     cursor: pointer;
-    vertical-align: middle;
 }
 .about-dot.active {
     background: #333;
@@ -896,16 +902,16 @@ button{
     position: relative;
     align-items: center;
     width: fit-content;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shdw);
     height: fit-content;
     max-height: 65vh;
     margin: auto;
     margin-top: 25pt;
-    background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
+    background: var(--bg);
     padding: 20pt;
     overflow: auto;
     border-radius: 25pt;
-    border: 3pt solid lightgray;
+    border: var(--bdr);
     width: 60vw;
     align-content: center;
     display: flex;
@@ -1061,16 +1067,16 @@ button{
 }
 
     .audio-player {
-        max-width: 650px;
-        background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
-        margin: 20px auto;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        border: 3pt solid lightgray;
-        border-radius: 25pt;
-        padding: 20px;
-        position: relative;
-        z-index: 100;
-    }
+            max-width: 650px;
+            background: var(--bg);
+            margin: 20px auto;
+            box-shadow: var(--shdw);
+            border: var(--bdr);
+            border-radius: 25pt;
+            padding: 20px;
+            position: relative;
+            z-index: 100;
+        }
 
     
     .play-pause-btn {
@@ -1182,10 +1188,10 @@ button{
     .floater{
         z-index: 1000;
         position: relative;
-        background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
-        border: 3pt solid lightgray;
+        background: var(--bg);
+        border: var(--bdr);
         border-radius: 25pt;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shdw);
         padding: 20pt;
         font-size: medium;
         max-width: 650px;
@@ -1201,11 +1207,13 @@ button{
         max-width: calc(100vw - 80pt);
         font-size: small;
         max-height: 130pt;
+        background: var(--bg);
     }
 
     .audio-player {
         max-width: calc(100vw - 80pt);
         max-height: 120pt;
+        background: var(--bg);
     }
 
     .player-controls{
@@ -1236,6 +1244,7 @@ button{
         width: calc(100vw - 20pt);
         max-height: 45vh;
         text-align: center !important;
+        background: var(--bg);
     }
 
     .guestbook-post{
@@ -1265,6 +1274,8 @@ button{
         gap: 10pt;
         transition: opacity 0.3s ease, filter 0.3s ease, transform 0.4s cubic-bezier(0.4,0,0.2,1);
         z-index: 0;
+        background: var(--bg);
+        border: var(--bdr);
     }
     .linksContainer.fade-out {
         opacity: 0;
@@ -1296,6 +1307,8 @@ button{
         margin: auto;
         margin-top: 3vh;
         margin-bottom: 15pt !important;
+        background: var(--bg);
+        border: var(--bdr);
     }
 
     .svg-row {
@@ -1303,6 +1316,7 @@ button{
         gap: 20pt;
         width: fit-content;
         margin-top: 0pt;
+        background: var(--bg);
     }
     
     #miiCnr{
@@ -1320,7 +1334,7 @@ button{
         bottom: 10pt;
         right: 100pt;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        background: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
+        background: var(--bg);
         padding: 15pt;
         border-radius: 25pt 25pt 2pt 25pt;
         border: 2.5pt solid lightgray;
@@ -1371,6 +1385,7 @@ button{
         padding: 3pt;
         text-align: center;
         box-sizing: border-box;
+        background: var(--bg);
     }
 
     .mIdleVid{
@@ -1410,6 +1425,8 @@ button{
         min-height: 200pt;
         padding: 5pt;
         margin: 15pt 15pt 0 15pt;
+        background: var(--bg);
+        border: var(--bdr);
     }
 
     .miiIdle{
@@ -1467,6 +1484,7 @@ button{
         padding: 3pt;
         text-align: center;
         box-sizing: border-box;
+        background: var(--bg);
     }
 
     .linkBox{
@@ -1479,6 +1497,7 @@ button{
 
     .linksContainer{
         padding: 10pt;
+        background: var(--bg);
     }
 
     .linkIcon{
@@ -1498,6 +1517,7 @@ button{
         max-width: 150pt;
         min-width: auto;
         width: fit-content;
+        background: var(--bg);
     }
 
     #speechText{
