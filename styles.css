@@ -227,6 +227,35 @@ img{
     margin-right: 5%;
 }
 
+.warning-banner {
+    display: flex;
+    align-items: center;
+    gap: 8pt;
+    margin-top: 15pt;
+    padding: 12pt 15pt;
+    background: linear-gradient(180deg, #fffce8 0%, #fff8c5 100%);
+    border: 2pt solid #d4a72c;
+    border-left: 5pt solid #d4a72c;
+    border-radius: 8pt;
+    font-family: Nintendo;
+    font-size: 11pt;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.08), 0 0 3px 2px rgba(212,167,44,0.08) inset;
+}
+
+.warning-icon {
+    flex-shrink: 0;
+    fill: #9a6700;
+    width: 16pt;
+    height: 16pt;
+}
+
+.warning-text {
+    color: #614700;
+    margin: 0;
+}
+
 .statusContainer{
     position: fixed;
     bottom: -1000pt;
@@ -1204,6 +1233,19 @@ button{
 
 
 @media (max-width: 768px) {
+
+    .warning-banner {
+        font-size: 9pt;
+        padding: 10pt 12pt;
+        gap: 6pt;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .warning-icon {
+        width: 14pt;
+        height: 14pt;
+    }
 
     .floater{
         max-width: calc(100vw - 80pt);
