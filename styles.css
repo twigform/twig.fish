@@ -1264,6 +1264,7 @@ button{
         width: 100%;
         left: 50%;
         margin: 0 auto;
+        bottom: 20px;
         position: relative;
         display: flex;
         transform: translateX(-50%);
@@ -1350,9 +1351,20 @@ button{
         width: calc(100vw - 80pt);
         margin: auto;
         margin-top: 3vh;
+        padding: 15pt;
         margin-bottom: 15pt !important;
         background: var(--bg);
         border: var(--bdr);
+    }
+
+    .time-display{
+        display: none;
+    }
+
+    .play-pause-btn{
+        width: 40px;
+        height: 40px;
+        border: 2pt solid #7446de;
     }
 
     .svg-row {
@@ -1455,11 +1467,12 @@ button{
     .title{
         font-size: 20pt;
         margin: 0pt;
+        padding: 0pt;
+        line-height: 0;
     }
 
     .separator{
         margin: 5pt;
-        margin-top: 0;
         margin-left: auto;
         margin-right: auto;
     }
