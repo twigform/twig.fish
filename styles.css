@@ -1,39 +1,43 @@
 :root {
-    --bg: linear-gradient(0deg,rgba(224, 224, 224, 1) 0%, rgba(247, 247, 247, 1) 100%);
-    --shdw: 0 4px 16px 0 rgba(0,0,0,0.10);
+    --bg: linear-gradient(
+        0deg,
+        rgba(224, 224, 224, 1) 0%,
+        rgba(247, 247, 247, 1) 100%
+    );
+    --shdw: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
     /* , 0 0 5px 4px rgba(180,180,180,0.11) inset (add for bubbley look, gonna rework styles later)*/
     --bdr: 3pt solid lightgray;
 }
 
 @font-face {
-    font-family: 'Nintendo';
-    src: url('assets/fonts/Nintendo Wii U (NintendoU).ttf') format('truetype');
+    font-family: "Nintendo";
+    src: url("assets/fonts/Nintendo Wii U (NintendoU).ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Xtra Icons';
-    src: url('assets/fonts/Nintendo DS, 2DS and 3DS (New Fontendo 23DSi Lite XL).ttf') format('truetype');
+    font-family: "Xtra Icons";
+    src: url("assets/fonts/Nintendo DS, 2DS and 3DS (New Fontendo 23DSi Lite XL).ttf")
+        format("truetype");
 }
 
 @viewport {
-  zoom: 1.0;
-  min-zoom: 1.0;
-  max-zoom: 1.5;
+    zoom: 1;
+    min-zoom: 1;
+    max-zoom: 1.5;
 }
 
-body,html{
-    font-family: 'Nintendo', sans-serif;
+body,
+html {
+    font-family: "Nintendo", sans-serif;
     margin: 0;
     /* overflow: hidden; */
 }
 
-
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+    background-color: transparent;
 }
 
-
-img{
+img {
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -41,28 +45,39 @@ img{
     -ms-user-select: none;
 }
 
-.backgroundContainer{
+.backgroundContainer {
     width: 100%;
     height: 100%;
-    overflow:hidden;
+    overflow: hidden;
     position: fixed;
-    top:0px;
-    left:0px;
+    top: 0px;
+    left: 0px;
     z-index: 0;
 
     background: hsla(0, 0%, 92%, 1);
 
-    background: linear-gradient(135deg, hsla(0, 0%, 92%, 1) 0%, hsla(0, 0%, 99%, 1) 100%);
+    background: linear-gradient(
+        135deg,
+        hsla(0, 0%, 92%, 1) 0%,
+        hsla(0, 0%, 99%, 1) 100%
+    );
 
-    background: -moz-linear-gradient(135deg, hsla(0, 0%, 92%, 1) 0%, hsla(0, 0%, 99%, 1) 100%);
+    background: -moz-linear-gradient(
+        135deg,
+        hsla(0, 0%, 92%, 1) 0%,
+        hsla(0, 0%, 99%, 1) 100%
+    );
 
-    background: -webkit-linear-gradient(135deg, hsla(0, 0%, 92%, 1) 0%, hsla(0, 0%, 99%, 1) 100%);
+    background: -webkit-linear-gradient(
+        135deg,
+        hsla(0, 0%, 92%, 1) 0%,
+        hsla(0, 0%, 99%, 1) 100%
+    );
 
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EAEAEA", endColorstr="#FDFDFD", GradientType=1 );
-    
 }
 
-.scroller{
+.scroller {
     overflow: hidden;
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fafafa' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='2.5'/%3E%3Ccircle cx='13' cy='13' r='2.5'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: repeat;
@@ -77,12 +92,16 @@ img{
 }
 
 @keyframes scroll {
-    0% { background-position: 0 0; }
-    100% { background-position: -100% -100%; }
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% -100%;
+    }
 }
 
-.title{
-    font-family: 'Nintendo', sans-serif;
+.title {
+    font-family: "Nintendo", sans-serif;
     margin-top: 0pt;
     margin-bottom: 0pt;
     display: flex;
@@ -95,12 +114,11 @@ img{
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.title:hover{
+.title:hover {
     scale: 1.1;
 }
 
-
-.logo{
+.logo {
     max-width: 350pt;
     width: 50vw;
     margin: auto;
@@ -118,7 +136,7 @@ img{
     cursor: pointer;
 }
 
-.header{
+.header {
     position: relative;
     z-index: 2;
     text-align: center;
@@ -135,7 +153,7 @@ img{
     max-width: 895px;
 }
 
-#miiCnr{
+#miiCnr {
     position: fixed;
     bottom: 0px;
     z-index: 2;
@@ -148,25 +166,25 @@ img{
     transform-origin: center bottom;
 }
 
-#miiCnr:hover{
+#miiCnr:hover {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     transform: scaleX(0.97) scaleY(1.03);
     cursor: pointer;
 }
 
-#miiCnr:active{
+#miiCnr:active {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     transform: scaleX(1.03) scaleY(0.97);
     cursor: pointer;
 }
 
-#speechBubble{
+#speechBubble {
     display: none;
     box-sizing: border-box;
     opacity: 0;
     position: fixed;
     z-index: 100;
-    font-family: 'Nintendo', sans-serif;
+    font-family: "Nintendo", sans-serif;
     bottom: 180pt;
     right: 180pt;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -179,10 +197,10 @@ img{
     width: 200pt;
 }
 
-#nextButton{
+#nextButton {
     box-sizing: border-box;
     z-index: 2;
-    font-family: 'Nintendo', sans-serif;
+    font-family: "Nintendo", sans-serif;
     border-radius: 9pt;
     padding-left: 20pt;
     padding-right: 20pt;
@@ -193,7 +211,7 @@ img{
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
-#nextButton:hover{
+#nextButton:hover {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     border: 2.5pt solid #7446de;
     transform: translateY(-2.5px);
@@ -202,7 +220,7 @@ img{
     cursor: pointer;
 }
 
-#nextButton:active{
+#nextButton:active {
     transition: all 0.2s ease-out;
     box-shadow: 0px 0px 0px #3a236f;
     transform: translateY(2.5px);
@@ -210,7 +228,7 @@ img{
     scale: 100%;
 }
 
-.separator{
+.separator {
     margin: auto;
     margin-top: 0pt;
     margin-bottom: 10pt;
@@ -218,7 +236,7 @@ img{
     width: 60%;
 }
 
-.subtitle{
+.subtitle {
     font-size: 14pt;
     margin-top: 15pt;
     margin-bottom: 0pt;
@@ -241,7 +259,9 @@ img{
     font-size: 11pt;
     margin-left: 5%;
     margin-right: 5%;
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.08), 0 0 3px 2px rgba(212,167,44,0.08) inset;
+    box-shadow:
+        0 3px 10px 0 rgba(0, 0, 0, 0.08),
+        0 0 3px 2px rgba(212, 167, 44, 0.08) inset;
 }
 
 .warning-icon {
@@ -256,7 +276,7 @@ img{
     margin: 0;
 }
 
-.statusContainer{
+.statusContainer {
     position: fixed;
     bottom: -1000pt;
     left: 2.5vw;
@@ -271,7 +291,7 @@ img{
     border-top: var(--bdr);
     border-left: var(--bdr);
     border-right: var(--bdr);
-    font-family: 'Nintendo', sans-serif;
+    font-family: "Nintendo", sans-serif;
     display: flex;
     flex-direction: column;
     max-width: 180pt;
@@ -299,27 +319,27 @@ img{
 }
 
 .statusContainer::after {
-  content: "↑";
-  position: absolute;
-  top: -16pt;
-  left: 50%;
-  transform: translateX(-50%) rotate(0deg);
-  width: 60pt;
-  height: 15pt;
-  text-align: center;
-  font-size: 13pt;
-  line-height: 15pt;
-  z-index: 2;
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  pointer-events: none;
-  transform-origin: 50% 60%;
+    content: "↑";
+    position: absolute;
+    top: -16pt;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    width: 60pt;
+    height: 15pt;
+    text-align: center;
+    font-size: 13pt;
+    line-height: 15pt;
+    z-index: 2;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+    transform-origin: 50% 60%;
 }
 
 .statusContainer.expanded::after {
-  transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
 }
 
-.albumCover{
+.albumCover {
     border-radius: 8pt;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100pt;
@@ -327,12 +347,12 @@ img{
     margin-bottom: 10pt;
 }
 
-.statusText{
+.statusText {
     margin-top: 0pt;
     overflow: hidden;
 }
 
-.gameImage{
+.gameImage {
     border-radius: 8pt;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100pt;
@@ -340,7 +360,7 @@ img{
     margin-bottom: 10pt;
 }
 
-.carouselPrev{
+.carouselPrev {
     border: var(--bdr);
     border-radius: 10pt;
     position: absolute;
@@ -354,7 +374,7 @@ img{
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
-.carouselNext{
+.carouselNext {
     border: var(--bdr);
     border-radius: 10pt;
     position: absolute;
@@ -368,28 +388,28 @@ img{
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
-.carouselBtn{
+.carouselBtn {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
-.carouselBtn:hover{
+.carouselBtn:hover {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     scale: 110%;
 }
 
-.carouselNext:active{
+.carouselNext:active {
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     scale: 100%;
     transform: translateX(10%) translateY(-50%);
 }
 
-.carouselPrev:active{
+.carouselPrev:active {
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     scale: 100%;
     transform: translateX(-10%) translateY(-50%) scaleX(-100%);
 }
 
-.discordActivityImage{
+.discordActivityImage {
     border-radius: 8pt;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100pt;
@@ -410,10 +430,10 @@ img{
     margin: 0 2pt;
     border-radius: 3pt;
     background: #bbb;
-    transition: 
+    transition:
         width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-        background 0.3s cubic-bezier(0.4,0,0.2,1),
-        border-radius 0.3s cubic-bezier(0.4,0,0.2,1);
+        background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        border-radius 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .carouselDot.active {
     background: #333;
@@ -421,18 +441,20 @@ img{
     border-radius: 8pt;
 }
 
-.linkIcon{
+.linkIcon {
     width: 90px;
-    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+    transition:
+        transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.25s ease;
     transform-origin: 50% 85%;
     position: relative;
     z-index: 2;
     will-change: transform, box-shadow;
 }
 
-.linksContainer{
-    position:relative;
-    z-index: 2;          
+.linksContainer {
+    position: relative;
+    z-index: 2;
     margin: auto;
     margin-top: 50px;
     background: var(--bg);
@@ -447,11 +469,14 @@ img{
     align-items: center;
     justify-items: center;
     box-sizing: border-box;
-    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    transition:
+        opacity 0.3s ease,
+        filter 0.3s ease,
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: var(--shdw);
 }
 
-.linkBox{
+.linkBox {
     text-align: center;
     padding: 15pt;
     box-shadow: 0px 0px 0px transparent;
@@ -474,55 +499,55 @@ img{
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
-
 .linkBox:active {
     transform: translateY(4pt) scale(0.995);
     transition: all 120ms cubic-bezier(0.65, 0, 0.35, 1);
     box-shadow: 0px 0px 0px lightgray !important;
 }
 
-.linkBox:active .linkIcon{
+.linkBox:active .linkIcon {
     transform: translateY(-10%) scale(1.15);
     filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
 }
 
-
 .linkBox:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 4px rgba(116,70,222,0.12), 0 6px 12px rgba(0,0,0,0.06);
+    box-shadow:
+        0 0 0 4px rgba(116, 70, 222, 0.12),
+        0 6px 12px rgba(0, 0, 0, 0.06);
     border-color: #7446de;
 }
 
-#abt:hover{
+#abt:hover {
     border: 4pt solid #7446de;
     box-shadow: 0px 5px 0px #3a236f;
     background-color: #e3d9fa;
     scale: 105%;
 }
 
-#msc:hover{
+#msc:hover {
     border: 4pt solid #de4674;
     box-shadow: 0px 5px 0px #6f233a;
     background-color: #f5ced9;
     scale: 105%;
 }
 
-#prj:hover{
+#prj:hover {
     border: 4pt solid #46de74;
     box-shadow: 0px 5px 0px #236f3a;
     background-color: #d9fae3;
     scale: 105%;
 }
 
-#lnks:hover{
+#lnks:hover {
     border: 4pt solid #deab46;
     box-shadow: 0px 5px 0px #6f5f23;
     background-color: #faf1d9;
     scale: 105%;
 }
 
-.linkText{
-    font-family: 'Nintendo', sans-serif;
+.linkText {
+    font-family: "Nintendo", sans-serif;
     margin-top: 0pt;
     font-size: 11pt;
     text-align: center;
@@ -531,12 +556,12 @@ img{
     margin-top: 2pt;
 }
 
-.icon{
-    font-family: 'Xtra Icons', sans-serif;
+.icon {
+    font-family: "Xtra Icons", sans-serif;
     font-size: 20pt;
 }
 
-.miiIdle{
+.miiIdle {
     position: fixed;
     bottom: -10pt;
     z-index: 200;
@@ -544,18 +569,18 @@ img{
     height: auto;
 }
 
-@supports (-webkit-touch-callout: none){
-    .mIdleVid{
+@supports (-webkit-touch-callout: none) {
+    .mIdleVid {
         visibility: hidden;
     }
 }
 
-.mIdleVid{
+.mIdleVid {
     width: 200pt;
     height: auto;
 }
 
-.back{
+.back {
     border-radius: 10pt;
     font-family: Nintendo;
     position: absolute;
@@ -564,7 +589,11 @@ img{
     z-index: 99999999999999999999999 !important;
     transform: translateX(-50%);
     opacity: 0;
-    transition: bottom 200ms cubic-bezier(0.68, -0.6, 0.32, 1.6), box-shadow 200ms cubic-bezier(0.65, 0, 0.35, 1), transform 200ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms cubic-bezier(0.65, 0, 0.35, 1);
+    transition:
+        bottom 200ms cubic-bezier(0.68, -0.6, 0.32, 1.6),
+        box-shadow 200ms cubic-bezier(0.65, 0, 0.35, 1),
+        transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 200ms cubic-bezier(0.65, 0, 0.35, 1);
     font-size: 20;
     padding: 5pt;
     background: var(--bg);
@@ -572,25 +601,24 @@ img{
     box-sizing: border-box;
 }
 
-.back:hover{
+.back:hover {
     cursor: pointer;
     transform: translateX(-50%) translateY(-3px);
     box-shadow: 0px 3px 0px gray;
 }
 
-.back:active{
+.back:active {
     cursor: pointer;
     transform: translateX(-50%) translateY(0px);
     box-shadow: 0px 0px 0px gray;
 }
 
-
-.miiIdle:hover .back{
+.miiIdle:hover .back {
     bottom: 250pt;
     opacity: 1;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
@@ -622,32 +650,32 @@ svg.smiley:active .mouth {
     transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.mouth{
+.mouth {
     transition: ease transform 0.15s;
     transform-origin: center center;
 }
 
-svg.smiley{
+svg.smiley {
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-svg.smiley:hover{
-    transform:scale(1.05);
+svg.smiley:hover {
+    transform: scale(1.05);
 }
 
 svg.smiley:active {
-    transform:scale(0.95) translateY(11px);
+    transform: scale(0.95) translateY(11px);
 }
 
-.SmileShadow{
+.SmileShadow {
     transition: transform 0.15s ease;
     transform-origin: center center;
 }
 
 svg.smiley:active .SmileShadow {
-    transform:translateY(-11px);
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);   
+    transform: translateY(-11px);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .svg-row {
@@ -670,7 +698,6 @@ svg.smiley:active .SmileShadow {
     box-shadow: var(--shdw);
 }
 
-
 .svg-row:hover {
     padding-left: 35pt;
     padding-right: 35pt;
@@ -692,158 +719,156 @@ svg.smiley:active .SmileShadow {
     filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2));
 }
 
-.speechiconline1{
+.speechiconline1 {
     transition: transform 0.15s ease;
     transform-origin: left center;
 }
 
-.speechiconline2{
+.speechiconline2 {
     transition: transform 0.15s ease;
     transform-origin: right center;
 }
 
-.speechiconline3{
+.speechiconline3 {
     transition: transform 0.15s ease;
     transform-origin: right center;
 }
 
-svg#bubble:hover .speechiconline1{
+svg#bubble:hover .speechiconline1 {
     transform: translateX(5px);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-svg#bubble:hover .speechiconline2{
+svg#bubble:hover .speechiconline2 {
     transform: translateX(-5px);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-svg#bubble:hover .speechiconline3{
+svg#bubble:hover .speechiconline3 {
     transform: translateX(5px);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-svg#bubble{
+svg#bubble {
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-svg#bubble:hover{
-    transform:scale(1.05);
+svg#bubble:hover {
+    transform: scale(1.05);
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-svg#bubble:active{
-    transform:scale(0.95) translateY(11px);
+svg#bubble:active {
+    transform: scale(0.95) translateY(11px);
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-svg#bubble:active .speechiconline1{
+svg#bubble:active .speechiconline1 {
     transform: translateX(-5px);
     transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-svg#bubble:active .speechiconline2{
+svg#bubble:active .speechiconline2 {
     transform: translateX(5px);
     transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-svg#bubble:active .speechiconline3{
+svg#bubble:active .speechiconline3 {
     transform: translateX(-5px);
     transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.BubbleShadow{
+.BubbleShadow {
     transition: transform 0.15s ease;
     transform-origin: center center;
 }
-svg#bubble:active .BubbleShadow{
+svg#bubble:active .BubbleShadow {
     transform: translateY(-11px);
     transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}   
-
-
-#web{
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    transform-origin: center center ;
 }
 
-.webline{
+#web {
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center center;
+}
+
+.webline {
     transition: ease transform 0.3s;
     transform-origin: center center;
 }
-#web:hover .webline{
-    transform:rotate(180deg) translateY(9.5px);
+#web:hover .webline {
+    transform: rotate(180deg) translateY(9.5px);
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#web:hover{
-    transform:scale(1.05);
+#web:hover {
+    transform: scale(1.05);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#web:active{
-    transform:scale(0.95) translateY(12px);
+#web:active {
+    transform: scale(0.95) translateY(12px);
 }
 
-.webshadow{
+.webshadow {
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transform-origin: center center ;
+    transform-origin: center center;
 }
 
-#web:active .webshadow{
-    transform:translateY(-13px);
+#web:active .webshadow {
+    transform: translateY(-13px);
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-#miiVerse{
+#miiVerse {
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transform-origin: center center ;
+    transform-origin: center center;
 }
 
-#miiVerse:hover{
-    transform:scale(1.05);
+#miiVerse:hover {
+    transform: scale(1.05);
 }
 
-#miiVerse:active{
-    transform:scale(0.95) translateY(8px);
+#miiVerse:active {
+    transform: scale(0.95) translateY(8px);
 }
 
-.miiVEyeL{
+.miiVEyeL {
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transform-origin: center center ;
+    transform-origin: center center;
 }
 
-.miiVEyeR{
+.miiVEyeR {
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transform-origin: center center ;
+    transform-origin: center center;
 }
 
-.miiVMouth{
+.miiVMouth {
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transform-origin: center center ;
-
+    transform-origin: center center;
 }
 
-#miiVerse:active .miiVMouth{
-    transform:translateY(-10px) scaleX(1.3) scaleY(0.8);
+#miiVerse:active .miiVMouth {
+    transform: translateY(-10px) scaleX(1.3) scaleY(0.8);
 }
 
-.miivshadow{
+.miivshadow {
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transform-origin: center center ;
+    transform-origin: center center;
 }
 
-#miiVerse:active .miivshadow{
-    transform:translateY(-8px);
+#miiVerse:active .miivshadow {
+    transform: translateY(-8px);
 }
 
-#miiVerse:active .miiVEyeL{
-    transform:translateY(-30px) translateX(2px) scaleX(1.2) scaleY(0.4);
+#miiVerse:active .miiVEyeL {
+    transform: translateY(-30px) translateX(2px) scaleX(1.2) scaleY(0.4);
 }
 
-#miiVerse:active .miiVEyeR{
-    transform:translateY(-30px) translateX(-2px) scaleX(1.2) scaleY(0.4);
+#miiVerse:active .miiVEyeR {
+    transform: translateY(-30px) translateX(-2px) scaleX(1.2) scaleY(0.4);
 }
 
 #aboutMeCarousel {
@@ -867,7 +892,7 @@ svg#bubble:active .BubbleShadow{
 .about-carousel-content {
     min-height: 180pt;
     max-height: 180pt;
-    overflow:auto;
+    overflow: auto;
     border-radius: 20pt;
     display: flex;
     flex-direction: column;
@@ -876,7 +901,7 @@ svg#bubble:active .BubbleShadow{
     margin: auto;
 }
 
-.about-section-title{
+.about-section-title {
     font-size: 18pt;
     margin: 0pt 0pt 4pt 0pt;
 }
@@ -893,23 +918,23 @@ svg#bubble:active .BubbleShadow{
     margin: 0 2pt;
     border-radius: 3pt;
     background: #bbb;
-    transition: 
+    transition:
         width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-        background 0.3s cubic-bezier(0.4,0,0.2,1),
-        border-radius 0.3s cubic-bezier(0.4,0,0.2,1);
+        background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        border-radius 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 .about-dot.active {
     background: #333;
     width: 20pt;
     border-radius: 8pt;
-    transition: 
+    transition:
         width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-        background 0.3s cubic-bezier(0.4,0,0.2,1),
-        border-radius 0.3s cubic-bezier(0.4,0,0.2,1);
+        background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        border-radius 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-button{
+button {
     outline: none;
     cursor: pointer;
     background: none;
@@ -927,7 +952,7 @@ button{
     transition: none;
 }
 
-.guestbook{
+.guestbook {
     z-index: 2;
     box-sizing: border-box;
     position: relative;
@@ -949,8 +974,8 @@ button{
     flex-direction: column;
 }
 
-#author{
-    font-family: 'Nintendo', sans-serif;
+#author {
+    font-family: "Nintendo", sans-serif;
     font-size: 11pt;
     margin: 2pt;
     border-radius: 5pt;
@@ -961,11 +986,13 @@ button{
     background-color: whitesmoke;
     padding-top: 5pt;
     padding-bottom: 5pt;
-    transition: all 0.4s ease, scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    transition:
+        all 0.4s ease,
+        scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
-#message{
-    font-family: 'Nintendo', sans-serif;
+#message {
+    font-family: "Nintendo", sans-serif;
     font-size: 11pt;
     margin: 2pt;
     border-radius: 5pt;
@@ -976,27 +1003,37 @@ button{
     padding-right: 20pt;
     padding-top: 5pt;
     padding-bottom: 5pt;
-    transition: all 0.4s ease, scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    transition:
+        all 0.4s ease,
+        scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
-#author:hover, #message:hover{
+#author:hover,
+#message:hover {
     cursor: pointer;
     scale: 0.97;
 }
 
-#author:focus, #message:focus{
+#author:focus,
+#message:focus {
     outline: none;
     border: 2pt solid #7446de;
-    box-shadow: 0 0 0 4px rgba(116,70,222,0.12), 0 6px 12px rgba(0,0,0,0.06);
+    box-shadow:
+        0 0 0 4px rgba(116, 70, 222, 0.12),
+        0 6px 12px rgba(0, 0, 0, 0.06);
     background-color: white;
-    transition: box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2), border 0.4s ease-out, background 0.4s ease-out, scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    transition:
+        box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2),
+        border 0.4s ease-out,
+        background 0.4s ease-out,
+        scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     cursor: text;
     scale: 1;
 }
-#postbutton{
+#postbutton {
     box-sizing: border-box;
     z-index: 2;
-    font-family: 'Nintendo', sans-serif;
+    font-family: "Nintendo", sans-serif;
     border-radius: 9pt;
     padding-left: 13pt;
     padding-right: 13pt;
@@ -1005,14 +1042,17 @@ button{
     border: 2.5pt solid transparent;
     background-color: #f5f5f5;
     border: 2pt solid lightgray;
-    transition: box-shadow 0.4s ease, border 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+    transition:
+        box-shadow 0.4s ease,
+        border 0.4s ease,
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     margin-top: 10pt;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-#postbutton:hover{
+#postbutton:hover {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
     border: 2pt solid #7446de;
     box-shadow: 0px 3px 0px #3a236f;
@@ -1021,7 +1061,7 @@ button{
     transform: translateY(-3px);
 }
 
-#postbutton:active{
+#postbutton:active {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     border: 2pt solid #7446de;
     box-shadow: 0px 0px 0px #3a236f;
@@ -1041,12 +1081,14 @@ button{
 #postbutton:active svg {
     transform: translate(-0px, 0px) scale(1.15);
 }
-.guestbook-post{
+.guestbook-post {
     background: white;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2), box-shadow 0.2s ease-out;
+    transition:
+        all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2),
+        box-shadow 0.2s ease-out;
     border-radius: 15pt;
-    padding: 10px; 
-    margin: 15px 0; 
+    padding: 10px;
+    margin: 15px 0;
     max-width: 500pt;
     min-width: 500pt;
     text-wrap: wrap;
@@ -1054,29 +1096,29 @@ button{
     border-radius: 10px;
 }
 
-.author{
+.author {
     margin-left: 35pt;
 }
 
-.message{
+.message {
     margin-top: 2pt !important;
     margin-left: 35pt;
 }
 
-.guestbook-post:hover{
+.guestbook-post:hover {
     scale: 1.02;
     cursor: pointer;
     box-shadow: 0px 4px 0px var(--shadow-color);
     transform: translateY(-4px);
 }
 
-.guestbook-post img{
+.guestbook-post img {
     max-width: 150pt;
     height: auto;
     border-radius: 10pt;
 }
 
-#eyepfp{
+#eyepfp {
     transition: transform 0.15s ease;
     transform-origin: center center;
 }
@@ -1086,7 +1128,7 @@ button{
     transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.player-controls{
+.player-controls {
     bottom: 20pt;
     z-index: 1000;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -1097,143 +1139,144 @@ button{
     gap: 15pt;
 }
 
-    .audio-player {
-            max-width: 650px;
-            background: var(--bg);
-            margin: 20px auto;
-            box-shadow: var(--shdw);
-            border: var(--bdr);
-            border-radius: 25pt;
-            padding: 20px;
-            position: relative;
-            z-index: 100;
-        }
+.audio-player {
+    max-width: 650px;
+    background: var(--bg);
+    margin: 20px auto;
+    box-shadow: var(--shdw);
+    border: var(--bdr);
+    border-radius: 25pt;
+    padding: 20px;
+    position: relative;
+    z-index: 100;
+}
 
-    
-    .play-pause-btn {
-        background: white;
-        color: #7446de;
-        box-shadow: 0 0px 0px #3a236f;
-        border: 3px solid #7446de;
-        border-radius: 30%;
-        width: 50px;
-        box-sizing: border-box;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s, transform 0.2s;
-    }
-    
-    .play-pause-btn:hover {
-        background: white;
-        box-shadow: 0 3px 0px #3a236f;
-        transform: scale(1.1) translateY(-3px);
-    }
-    
-    .play-pause-btn:active {
-        box-shadow: 0 0px 0px #3a236f;
-        transform: scale(0.95) translateY(3px);
-    }
-    
-    .play-pause-btn svg {
-        transition: opacity 0.3s, transform 0.3s;
-    }
-    
-    .progress-container {
-        flex: 1;
-        position: relative;
-    }
-    
-    .progress-bar {
-        position: relative;
-        width: 100%;
-        height: 8px;
-        background: lightgray;
-        border-radius: 4px;
-        cursor: pointer;
-        overflow: visible;
-    }
-    
-    .progress-fill {
-        position: absolute;
-        height: 100%;
-        background: #7446de;
-        border-radius: 4px;
-        width: 0%;
-        transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        pointer-events: none;
-    }
-    
-    .progress-handle {
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        background: #fff;
-        border: 3px solid #7446de;
-        border-radius: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        left: 0%;
-        transition: left 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    
-    .progress-handle:active {
-        cursor: grabbing;
-    }
-    
-    .progress-tooltip {
-        position: absolute;
-        bottom: 20px;
-        transform: translateX(-50%) translateY(5px);
-        background: #333;
-        color: white;
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-size: 12px;
-        pointer-events: none;
-        opacity: 0;
-        transition: all 0.2s;
-        white-space: nowrap;
-        z-index: 100;
-    }
-    
-    .progress-tooltip::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 5px solid transparent;
-        border-top-color: #333;
-    }
-    
-    .time-display {
-        font-size: 14px;
-        color: #333;
-        min-width: 100px;
-        text-align: center;
-    }
+.play-pause-btn {
+    background: white;
+    color: #7446de;
+    box-shadow: 0 0px 0px #3a236f;
+    border: 3px solid #7446de;
+    border-radius: 30%;
+    width: 50px;
+    box-sizing: border-box;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+        all 0.3s,
+        transform 0.2s;
+}
 
-    .floater{
-        z-index: 1000;
-        position: relative;
-        background: var(--bg);
-        border: var(--bdr);
-        border-radius: 25pt;
-        box-shadow: var(--shdw);
-        padding: 20pt;
-        font-size: medium;
-        max-width: 650px;
-        justify-self: center;        
-        margin: auto;
-        overflow: auto;
-    }
+.play-pause-btn:hover {
+    background: white;
+    box-shadow: 0 3px 0px #3a236f;
+    transform: scale(1.1) translateY(-3px);
+}
 
+.play-pause-btn:active {
+    box-shadow: 0 0px 0px #3a236f;
+    transform: scale(0.95) translateY(3px);
+}
+
+.play-pause-btn svg {
+    transition:
+        opacity 0.3s,
+        transform 0.3s;
+}
+
+.progress-container {
+    flex: 1;
+    position: relative;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: lightgray;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.progress-fill {
+    position: absolute;
+    height: 100%;
+    background: #7446de;
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+}
+
+.progress-handle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 3px solid #7446de;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0%;
+    transition: left 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.progress-handle:active {
+    cursor: grabbing;
+}
+
+.progress-tooltip {
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%) translateY(5px);
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.progress-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+}
+
+.time-display {
+    font-size: 14px;
+    color: #333;
+    min-width: 100px;
+    text-align: center;
+}
+
+.floater {
+    z-index: 1000;
+    position: relative;
+    background: var(--bg);
+    border: var(--bdr);
+    border-radius: 25pt;
+    box-shadow: var(--shdw);
+    padding: 20pt;
+    font-size: medium;
+    max-width: 650px;
+    justify-self: center;
+    margin: auto;
+    overflow: auto;
+}
 
 @media (max-width: 768px) {
-
     .warning-banner {
         font-size: 9pt;
         padding: 10pt 12pt;
@@ -1247,7 +1290,7 @@ button{
         height: 14pt;
     }
 
-    .floater{
+    .floater {
         max-width: calc(100vw - 80pt);
         font-size: small;
         max-height: 130pt;
@@ -1260,7 +1303,7 @@ button{
         background: var(--bg);
     }
 
-    .player-controls{
+    .player-controls {
         width: 100%;
         left: 50%;
         margin: 0 auto;
@@ -1270,20 +1313,20 @@ button{
         transform: translateX(-50%);
     }
 
-    .profile-icon{
+    .profile-icon {
         display: none;
     }
 
-    .author{
+    .author {
         margin-left: 0pt;
     }
 
-    .message{
+    .message {
         margin-top: 5pt;
         margin-left: 0pt;
     }
 
-    .guestbook{
+    .guestbook {
         margin-left: 10pt;
         margin-right: 10pt;
         width: calc(100vw - 20pt);
@@ -1292,32 +1335,36 @@ button{
         background: var(--bg);
     }
 
-    .guestbook-post{
+    .guestbook-post {
         font-size: 10pt;
         max-width: 200pt;
         min-width: 200pt;
     }
 
-    #author, #message{
+    #author,
+    #message {
         font-size: 10pt;
     }
 
-    #message{
+    #message {
         margin-top: 10pt;
     }
 
-    .logo{
+    .logo {
         width: 70vw;
     }
-    
-    .linksContainer{
+
+    .linksContainer {
         width: calc(100vw - 80pt);
         margin: auto;
         margin-top: 3vh;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(1, 1fr);
         gap: 10pt;
-        transition: opacity 0.3s ease, filter 0.3s ease, transform 0.4s cubic-bezier(0.4,0,0.2,1);
+        transition:
+            opacity 0.3s ease,
+            filter 0.3s ease,
+            transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 0;
         background: var(--bg);
         border: var(--bdr);
@@ -1328,12 +1375,12 @@ button{
         transform: translateY(-400px);
     }
 
-    .spacer{
+    .spacer {
         height: 600px;
         width: 100%;
     }
 
-    .linkBox{
+    .linkBox {
         flex-direction: row;
         width: auto;
         max-height: 70pt;
@@ -1343,11 +1390,11 @@ button{
         justify-content: center;
     }
 
-    .linkText{
+    .linkText {
         margin-top: auto;
     }
 
-    .header{
+    .header {
         width: calc(100vw - 80pt);
         margin: auto;
         margin-top: 3vh;
@@ -1357,11 +1404,11 @@ button{
         border: var(--bdr);
     }
 
-    .time-display{
+    .time-display {
         display: none;
     }
 
-    .play-pause-btn{
+    .play-pause-btn {
         width: 40px;
         height: 40px;
         border: 2pt solid #7446de;
@@ -1374,19 +1421,19 @@ button{
         margin-top: 0pt;
         background: var(--bg);
     }
-    
-    #miiCnr{
+
+    #miiCnr {
         z-index: 10000000;
         width: 120pt;
         height: 120pt;
     }
-    
-    #speechBubble{
+
+    #speechBubble {
         box-sizing: border-box;
         opacity: 0;
         position: fixed;
         z-index: 100;
-        font-family: 'Nintendo', sans-serif;
+        font-family: "Nintendo", sans-serif;
         bottom: 10pt;
         right: 100pt;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -1399,21 +1446,21 @@ button{
         width: 140pt;
     }
 
-    #speechText{
+    #speechText {
         font-size: 13pt;
     }
 
-    #postbutton{
+    #postbutton {
         margin-top: 5pt;
         width: auto;
     }
 
-    .statusContainer{
+    .statusContainer {
         min-width: 150pt;
         max-width: 150pt;
     }
 
-    .carouselPrev{
+    .carouselPrev {
         left: 0pt;
         font-size: 18pt;
         background-color: transparent;
@@ -1421,7 +1468,7 @@ button{
         color: black;
     }
 
-    .carouselNext{
+    .carouselNext {
         right: 0pt;
         font-size: 18pt;
         background-color: transparent;
@@ -1429,9 +1476,7 @@ button{
         color: black;
     }
 
-
-
-    .back{
+    .back {
         position: fixed;
         opacity: 100%;
         bottom: 20pt;
@@ -1444,7 +1489,7 @@ button{
         background: var(--bg);
     }
 
-    .mIdleVid{
+    .mIdleVid {
         width: 135pt;
     }
 
@@ -1460,18 +1505,18 @@ button{
         padding-right: 15pt;
     }
 
-    .subtitle{
+    .subtitle {
         font-size: 12pt;
     }
 
-    .title{
+    .title {
         font-size: 20pt;
         margin: 0pt;
         padding: 0pt;
         line-height: 0;
     }
 
-    .separator{
+    .separator {
         margin: 5pt;
         margin-left: auto;
         margin-right: auto;
@@ -1486,52 +1531,48 @@ button{
         border: var(--bdr);
     }
 
-    .miiIdle{
+    .miiIdle {
         margin-left: -10pt;
     }
-    
-    .miiIdle:hover .back{
+
+    .miiIdle:hover .back {
         bottom: 20pt;
         opacity: 1;
     }
 
-    #miiCnr{
+    #miiCnr {
         width: 15vh;
         height: auto;
     }
-
-    
-
 }
 
-@media (max-width: 415px){
-
-    .mIdleVid{
+@media (max-width: 415px) {
+    .mIdleVid {
         width: 90pt;
     }
 
-    #guestbook{
+    #guestbook {
         max-height: 65vh;
     }
 
-    .miiIdle{
+    .miiIdle {
         z-index: 10000;
     }
 
-    .subtitle{
+    .subtitle {
         font-size: smaller;
     }
 
-    .about-carousel-content{
+    .about-carousel-content {
         font-size: small;
     }
 
-    .about-section-title{
+    .about-section-title {
         font-size: medium;
         margin-top: 5pt;
     }
 
-    .back{
+    .back {
         position: fixed;
         opacity: 100%;
         bottom: 20pt;
@@ -1544,7 +1585,7 @@ button{
         background: var(--bg);
     }
 
-    .linkBox{
+    .linkBox {
         width: 180pt;
         min-width: auto;
         max-width: 100%;
@@ -1552,34 +1593,50 @@ button{
         border-radius: 20pt;
     }
 
-    .linksContainer{
+    .linksContainer {
         padding: 10pt;
         background: var(--bg);
     }
 
-    .linkIcon{
+    .linkIcon {
         width: 50pt;
     }
 
-    .statusContainer{
+    .statusContainer {
         min-width: 120pt;
         max-width: 120pt;
     }
 
-    .statusText{
+    .statusText {
         font-size: small;
     }
 
-    #speechBubble{
+    #speechBubble {
         max-width: 150pt;
         min-width: auto;
         width: fit-content;
         background: var(--bg);
     }
 
-    #speechText{
+    #speechText {
         font-size: small;
     }
+}
 
+@media (max-width: 370px) {
+    /*.linkIcon {
+        display: none;
+    }*/
 
+    .linkBox {
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 260px) {
+    .linkIcon {
+        display: none;
+    }
 }
