@@ -271,7 +271,7 @@ $(document).ready(function () {
         track.hasOwnProperty("@attr") && track["@attr"].nowplaying === "true";
       let imageUrl = track.image[2]["#text"];
 
-      if (imageUrl === "") {
+      if (imageUrl === "" || imageUrl === "https://lastfm-img.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png") {
         imageUrl = "assets/img/album_placeholder.png";
       }
 
