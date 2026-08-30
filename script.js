@@ -280,7 +280,9 @@ $(document).ready(function () {
           html: `
                     <div class='carouselItem'>
                         <p class='statusText'>Now Playing: ${trackName} by ${artistName}</p>
-                        <img class='albumCover' src='${imageUrl}' alt='${trackName} album cover'>
+                        <a href='${trackUrl}' target='_blank'>
+                            <img class='albumCover' src='${imageUrl}' alt='${trackName} album cover'>
+                        </a>
                     </div>
                 `,
         });
