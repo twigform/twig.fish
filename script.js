@@ -255,7 +255,9 @@ $(document).ready(function () {
       }
       maybeRenderCarousel();
     },
-  );
+  ).fail(function () {
+      maybeRenderCarousel();
+  });
 
   $.getJSON(
     "https://lastfm-worker.twigscoolemail.workers.dev/",
@@ -286,7 +288,9 @@ $(document).ready(function () {
 
       maybeRenderCarousel();
     },
-  );
+  ).fail(function () {
+      maybeRenderCarousel();
+  });
 
   $.getJSON(
     "https://nxapi-presence.fancy.org.uk/api/presence/3f6826999dd8ff52",
@@ -307,7 +311,9 @@ $(document).ready(function () {
       }
       maybeRenderCarousel();
     },
-  );
+  ).fail(function () {
+      maybeRenderCarousel();
+  });
 
   function maybeRenderCarousel() {
     apisLoaded++;
