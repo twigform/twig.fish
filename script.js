@@ -393,16 +393,16 @@ const aboutSections = [
     id: "btn-interests",
     title: "General",
     content: `<h2 class="about-section-title">General</h2><p>Hey there, I'm twig.<br>
-        I'm a musician, student, artist, dev, and generally strange being. <br> A site of a more avant garde aesthetic would better illustrate me as a person, but I wanted to make a Nintendo lookin site so we ended up with this.<br>
+        I'm a musician, student, artist, dev, and generally strange being. <br> A site of a more avant garde aesthetic would better illustrate me as a person, but I wanted to make a Nintendo lookin' site, so we ended up with this.<br>
         I go by any pronouns, but mostly they/them.<br>
-        I make music under the name "patchform", and do the rest of my online stuff is usually under "twig" or "twigform".<br>
+        I make music under the name "Patchform", and do the rest of my online stuff is usually under "twig" or "twigform".<br>
 
         Feel free to reach out if you want to chat or collaborate on something. :)</p>`,
   },
   {
     id: "btn-skills",
     title: "Interests",
-    content: `<h2 class="about-section-title">Interests</h2><p>I'm into a lotta stuff, but i specifically like:<br>
+    content: `<h2 class="about-section-title">Interests</h2><p>I'm into a lotta stuff, but I specifically like:<br>
         • Music (Breakcore / Mashcore specifically)<br>
         • Tech stuff<br>
         • Pallas Cats<br>
@@ -417,8 +417,8 @@ const aboutSections = [
         • Personal Website (you're here!)<br>
         • iiSU Launcher (Frontend)<br>
         • Very WIP JRPG (Gamemaker)<br>
-        • A ton of scrapped stuff<br>
-        • Other random stuff I'm too lazy to list here/try to remember<br>`,
+        • A TON of Scrapped Stuff<br>
+        • Other Random Stuff I'm Too Lazy to List Here/Try to Remember<br>`,
   },
   {
     id: "btn-links",
