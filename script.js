@@ -69,6 +69,10 @@ $(document).ready(function () {
     ":chiyojump:",
     "Hello, I am looking for Twigchan...",
     "goodnight bro",
+    "1v1 me in super auto pets",
+    "1v1 me in straftat bro 1v1 me in mario tennis 1v1 me in wii sports resort",
+    "I'm the famous Bearded Guy of Castle Town!",
+    "dog  🐕 woof",
   ];
 
   let lastMessageIndex = -1;
